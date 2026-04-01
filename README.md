@@ -1,25 +1,60 @@
-# AI Behavioral Evaluation (GPT vs Gemini)
+Overview
+This project evaluates the behavioral reliability of AI systems using a structured, psychology-inspired framework.
+Instead of treating AI as a black box, this study analyzes how models behave across repeated interactions, long-context conversations, and misleading inputs.
 
-This project explores how different AI models behave when evaluated across psychological-style metrics rather than just accuracy.
+objective
+To investigate whether AI systems demonstrate:
+Stable response patterns (Consistency)
+Reliable long-context recall (Memory)
+Resistance to incorrect user suggestions (Error Detection)
 
-Instead of treating AI as a black box, I tried to break down its behavior into measurable components:
-- Consistency of responses
-- Memory retention
-- Error detection and agreement patterns
+Methodology
+1. Consistency Testing
+Same prompt repeated across 10 independent trials
+Responses compared for:
+Structure
+Explanation pattern
+Conceptual stability
 
-## Approach
+Memory Evaluation
+Single long multi-topic conversation
+Included:
+Personal information
+Topic switching (philosophy → math → literature → back)
+Tested:
+Recall accuracy
+Context retention
 
-I designed a simple evaluation framework inspired by behavioral analysis:
-- Ran multiple trials
-- Assigned structured scores based on response patterns
-- Converted observations into quantitative metrics
+Error Detection
+Introduced intentionally incorrect user claims
+Measured whether AI:
+Corrects the user
+Partially agrees
+Blindly accepts
 
-The idea was to move from *subjective impressions* → *measurable behavior*
+Results
+Consistency
+Moderate variation across trials
+Core meaning stable, but response structure and examples fluctuated
+Memory
+Inconsistent recall performance
+Occasional distortion of previously provided user information
+Error Handling
+Observable tendency toward agreement bias
+Some incorrect inputs were accepted instead of challenged
 
-## Tools Used
-- Python
-- Pandas
-- Matplotlib
+Key Insight
+AI systems can appear consistent at a surface level, but exhibit instability in structure, memory retention, and error resistance under repeated and extended interaction.
+
+Interpretation
+AI behavior reflects pattern generation, not true stability
+Long-context interaction reveals memory limitations
+Agreement bias highlights lack of robust error-checking mechanisms
+
+Implementation
+Python-based scoring and analysis
+Behavioral metrics quantified and visualized
+Comparative evaluation across multiple trials
 
 ## Output
 - Generated comparative bar graph using matplotlib
@@ -30,16 +65,16 @@ The idea was to move from *subjective impressions* → *measurable behavior*
 
 ![AI Evaluation](ai_evaluation.png)
 
-## Key Insight
+Why This Project Matters
+This project shifts AI evaluation from:
+“Does it give correct answers?”
+to:
+“How reliably does it behave over time?”
 
-The comparison shows that models may differ not just in correctness, but in *how they behave* — consistency, agreement tendencies, and memory handling all contribute to overall performance.
+Future Scope
+Expand dataset across more prompts and models
+Introduce automated scoring pipelines
+Integrate statistical testing for behavioral patterns
 
-## Why this matters
-
-Most AI comparisons focus on benchmarks.  
-This project explores a more human-centered perspective:
-> Can we evaluate AI like we evaluate cognitive behavior?
-
----
-
-*Built as part of my interest in neuropsychology, cognition, and computational analysis.*
+Author
+Yuvirathod (Milkomedian)
