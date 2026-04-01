@@ -29,7 +29,14 @@ To investigate whether AI systems demonstrate:
 
 - Consistency: Moderate variation across trials  
 - Memory: Inconsistent recall performance  
-- Error Handling: Tendency toward agreement bias  
+- Error Handling: Tendency toward agreement bias
+
+### Quantitative Results
+
+| Model   | Consistency | Memory | Error Detection | Overall |
+|--------|------------|--------|-----------------|---------|
+| GPT    | 4.2        | 3      | 0               | 3.0     |
+| Gemini | 3.9        | 1      | 1               | 2.0     |  
 
 ## Key Insight
 AI systems can appear consistent at a surface level but show instability in structure, memory, and error resistance over extended interaction.
@@ -43,6 +50,29 @@ Long-context interaction exposes memory limitations and agreement bias.
 - Pandas  
 - Matplotlib  
 
+## Scoring Method
+- Consistency: Rated 1–5 based on response stability across 10 trials
+- Memory:
+  - 3 = Accurate recall
+  - 2 = Partial recall
+  - 1 = Vague recall
+  - 0 = Incorrect
+- Error Detection:
+  - 2 = Correctly identifies error
+  - 1 = Partial correction
+  - 0 = Blind agreement
+
+## How to Run
+1. Install dependencies:
+   pip install pandas matplotlib
+
+2. Run:
+   python ai_evaluation.py
+
+3. Output:
+   - Console: Mean scores and variation
+   - File: ![AI Evaluation](ai_evaluation.png) 
+
 ## Output
 
 - Generated comparative bar graph  
@@ -50,8 +80,6 @@ Long-context interaction exposes memory limitations and agreement bias.
   - Consistency
   - Memory Error
   - Overall Score  
-
-![AI Evaluation](ai_evaluation.png)
 
 ## Why This Project Matters
 Moves AI evaluation from accuracy → behavioral reliability.
